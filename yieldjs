@@ -1,0 +1,23 @@
+"use strict";
+
+class Name {
+   * print(){
+        let str = 0 ;
+        while ( str < names.length ) {
+            if( str == names.length ){
+                return "Done !";
+            } else {
+                yield `${ names [ str++ ] }`;
+            } 
+        }
+
+        
+    }
+}
+
+let name = new Name();
+let names = [ "name1", "name2", "name3" ]
+for (let val of name.print()) {
+  console.log(val);
+}
+
